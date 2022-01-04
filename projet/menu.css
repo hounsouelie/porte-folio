@@ -1,0 +1,420 @@
+
+body {
+  margin:0;
+  overflow-y: hidden;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+
+.desc {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  top: 5vw;
+  right: 0;
+  bottom: 0vw;
+  left: 0;
+  bottom: 25vw; 
+  height: 300px;
+  width: 500px;
+  color: white;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color:  #111;;
+  -webkit-perspective: 90rem;
+          perspective: 90rem;
+  -webkit-perspective-origin: 34% 61%;
+          perspective-origin: 34% 61%;
+          
+          
+}
+
+img {
+  width: 160px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50vw;
+  height: 50vw;
+  margin-left: 0;
+  margin-top: 0;
+  
+}
+
+button {
+  position:absolute;
+  cursor: pointer;
+  outline: 0;
+  width: 180px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #2C3138;
+  margin-top: 140px;
+  margin-left: -500px;
+  overflow: hidden;
+  -webkit-transform: scale(.7);
+          transform: scale(.7);
+}
+
+button::after {
+  content: "";
+  position: relative;
+  top: -40px;
+  display: block;
+  width: 48px;
+  height: 107%;
+  background-color: #000;
+  margin-top: -1px;
+  margin-left: -7px;
+  border-radius: 6px 0 0 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 46px;
+  margin-left: -7px;
+  margin-top: -1px;
+  -webkit-transition: all 200ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
+  transition: all 200ms cubic-bezier(0.25, 0.75, 0.5, 1.25);
+}
+
+.box-1:hover button::before {
+  width: 120%;
+  opacity: .8;
+  background-color: #00BF9C;
+}
+
+.box-2:hover button::before {
+  width: 120%;
+  opacity: .8;
+  background-color: #653EE6;
+}
+
+.box-3:hover button::before {
+  width: 120%;
+  opacity: .8;
+  background-color: #008BFF;
+}
+
+.box-4:hover button::before {
+  width: 120%;
+  opacity: .8;
+  background-color: #FF6500;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  will-change: transform;
+}
+
+
+.box-1 button {
+  border: 1px solid #00BF9C;
+  color: #fff;
+  font-size: 22px;
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+}
+
+.box-1 button::after {
+  content: "";
+  background-color: #00BF9C;
+  top: -85px
+}
+
+.box-2 button {
+  border: 1px solid #653EE6;
+  color: #fff;
+  font-size: 22px;
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+}
+
+.box-2 button::after {
+  content: "";
+  background-color: #653EE6;
+  top: -85px
+}
+
+.box-3 button {
+  border: 1px solid #008BFF;
+  color: #fff;
+  font-size: 22px;
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+}
+
+.box-3 button::after {
+  content: "";
+  background-color: #008BFF;
+  top: -85px
+}
+
+.box-4 button {
+  border: 1px solid #FF6500;
+  color: #fff;
+  font-size: 22px;
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+}
+
+.box-4 button::after {
+  content: "";
+  background-color: #FF6500;
+  top: -85px
+}
+
+.box .cover::after {
+  content: "";
+  z-index: -99;
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  display: block;
+  width: 160px;
+  height: 214px;
+  opacity: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 160px 214px;
+  -webkit-filter: blur(24px);
+          filter: blur(24px);
+  -webkit-transition: all 260ms ease-in-out;
+  transition: all 260ms ease-in-out;
+  will-change: transform;
+  -webkit-transform: scale(.6);
+          transform: scale(.6);
+}
+
+.box:hover .cover::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.box-1 button div::before {
+  content: 'Projet JS';
+  position: relative;
+  top: -44px;
+  left: -4px;
+  color: #00BF9C;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.box-1:hover button div::before {
+  color: #fff;
+}
+
+.box-2 button div::before {
+    content: 'Projet Pyton';
+    position: relative;
+    top: -44px;
+    left: 5px;
+    color: rgb(154, 123, 255);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.box-2:hover button div::before {
+    color: #fff;
+}
+
+.box-3 button div::before {
+    content: 'Projet Php';
+    position: relative;
+    top: -44px;
+    left: 3px;
+    color: #008BFF;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.box-3:hover button div::before {
+    color: #fff;
+}
+
+.box-4 button div::before {
+    content: 'Projet Java';
+    position: relative;
+    top: -44px;
+    left: 4px;
+    color: #FF6500;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.box-4:hover button div::before {
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1280px)
+{
+  body {margin:0;}
+
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+  
+  .main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px; /* Used in this example to enable scrolling */
+  }
+  
+  .desc {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0vw;
+    left: 0;
+    bottom: 25vw; 
+    height: 300px;
+    width: 500px;
+    color: white;
+  }
+  
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color:  #111;;
+    -webkit-perspective: 90rem;
+            perspective: 90rem;
+    -webkit-perspective-origin: 34% 61%;
+            perspective-origin: 34% 61%;
+            
+            
+  }
+  
+  img {
+    width: 160px;
+  }
+  
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 50vw;
+    height: 50vw;
+    margin-left: 0vw;
+    margin-top: 30vw;
+}
+
+button {
+  position:absolute;
+  cursor: pointer;
+  outline: 0;
+  width: 180px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #2C3138;
+  margin-top: 350px;
+  margin-left: -300px;
+  overflow: hidden;
+  -webkit-transform: scale(.7);
+          transform: scale(.7);
+}
+
+}
